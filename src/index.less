@@ -1,0 +1,64 @@
+@import '~antd/dist/antd.less';
+
+@primary-color: #02031a;
+@component-background: #ffffff;
+@layout-header-background: #ffffff;
+@body-background: #ffffff;
+@layout-body-background: #ffffff;
+@menu-inline-submenu-bg: #ffffff;
+@menu-item-active-bg: #ffffff;
+@popover-background: #ffffff;
+@border-color-base: rgba(39, 64, 96, 0.15);
+@border-color-split: rgba(39, 64, 96, 0.1);
+@table-header-bg: #ffffff;
+@text-color: #172c3c;
+@heading-color: #02031a;
+@input-bg: #ffffff;
+@select-background: @input-bg;
+@select-dropdown-bg: @input-bg;
+@picker-bg: @input-bg;
+@picker-bg: @input-bg;
+@calendar-bg: @input-bg;
+@progress-remaining-color: rgba(39, 64, 96, 0.2);
+@layout-trigger-background: #000000;
+@layout-trigger-height: 120px;
+
+#root > section.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-layout-sider-zero-width-trigger {
+  background-color: @text-color;
+}
+
+.ant-layout-header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  box-shadow: 0 0 20px -10px rgba(@text-color, 0.8);
+}
+
+.ant-layout-footer {
+  width: 100%;
+  box-shadow: 0 0 20px -10px rgba(@text-color, 0.8);
+}
+
+//#card-negocios .ant-form-item {
+//  margin-bottom: 0;
+//}
+#PageLayout {
+  margin-top: 64px;
+}
+
+@media screen and (max-width: 991px) {
+  .ant-layout-sider {
+    position: fixed !important;
+    overflow: inherit !important;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.07);
+    z-index: 2;
+    height: 100%;
+  }
+  .ant-layout-sider .ant-layout-sider-children {
+    overflow: hidden auto;
+  }
+}

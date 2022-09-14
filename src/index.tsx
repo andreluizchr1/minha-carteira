@@ -1,15 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+import { ConfigProvider } from 'antd';
+import locale from 'antd/lib/locale/pt_BR';
+
 import reportWebVitals from './reportWebVitals';
+import DefaultLayout from './app/layouts/Default/Default.layout';
+import Rotas from './app/routes';
+
+import './index.less';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <ConfigProvider locale={locale}>
+        <DefaultLayout>
+          <Rotas />
+        </DefaultLayout>
+      </ConfigProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
